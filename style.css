@@ -1,0 +1,438 @@
+/* ============== RESET / BASICS ============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+/* ============== HEADER IMAGE ============== */
+.header-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============== HEADER / NAV CONTAINER ============== */
+header {
+  background-color: #0077B5; /* Μπλε LinkedIn */
+  /* Αφαιρέθηκαν οι ιδιότητες fixed / top / left / z-index */
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  position: relative;
+  justify-content: center; /* Κεντραρισμένο σε Desktop */
+  align-items: center;
+  min-height: 60px; /* Το ελάχιστο ύψος της μπάρας */
+}
+
+/* Κανονικό μενού (desktop) */
+.desktop-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.desktop-nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.desktop-nav ul li a:hover {
+  background-color: #005f8b;
+}
+
+/* Hamburger button (κρυφό σε desktop) */
+.nav-toggle {
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ============== SIDE OVERLAY (για mobile) ============== */
+.side-overlay {
+  /* Ξεκινά κάτω από την εικόνα (150px), καλύπτει το υπόλοιπο */
+  position: fixed;
+  top: 150px;
+  left: 0;
+  width: 0; /* αρχικά κρυφό */
+  height: calc(100% - 150px);
+  background-color: #0077B5;
+  z-index: 999;
+  overflow-x: hidden;
+  transition: width 0.2s ease;
+  border-radius: 0 20px 20px 0; /* Στρογγυλεμένη δεξιά πλευρά */
+  opacity: 95%;
+}
+
+/* Κουμπί κλεισίματος (X) */
+.closebtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* Περιεχόμενο μέσα στο side overlay */
+.side-overlay-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-overlay-content a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  transition: background-color 0.2s ease;
+  padding: 0.5rem 1rem;
+}
+
+.side-overlay-content a:hover {
+  background-color: #005f8b;
+  border-radius: 4px;
+}
+
+/* ============== PAGE TITLE ============== */
+.page-title {
+  text-align: center;
+  margin: 2rem 0 1.5rem;
+  font-size: 3rem;
+  color: #000; /* Μαύρο */
+  font-weight: bold;
+}
+
+/* ============== MAIN CONTENT (κουτάκι) ============== */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  /* Αφαιρέθηκε το margin-top: 60px; */
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Αριστερό Πλαίσιο (μπλε) */
+.left-panel {
+  background-color: #0077B5;
+  padding: 2rem 1rem;
+  color: #ffffff;
+  flex: 1 1 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-panel img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+
+/* Δεξιό Πλαίσιο (κείμενο) */
+.right-panel {
+  flex: 2 1 500px;
+  padding: 2rem 1rem;
+}
+
+.right-panel p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* ============== SOCIAL ICONS ============== */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 2rem; /* Απόσταση μεταξύ τους */
+}
+
+.social-links a {
+  text-decoration: none;
+}
+
+.social-links img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+  opacity: 0.7;
+}
+
+/* ============== RESPONSIVE BREAKPOINTS ============== */
+@media (max-width: 992px) {
+  /* Κρύβουμε το desktop menu σε mobile */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Εμφανίζουμε το hamburger */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Προαιρετικά: αλλάζουμε διάταξη του main-content σε στήλη */
+  .main-content {
+    flex-direction: column;
+  }
+  .right-panel {
+    padding: 1rem;
+  }
+}
+
+.page-title-work {
+  text-align: center;
+  margin: 0rem;
+  font-size: 3rem;
+  color: #000; /* Μαύρο */
+  font-weight: bold;
+}
+
+/* Container για όλα τα κουτιά τεχνολογιών */
+.experience-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Απόσταση μεταξύ των κουτιών */
+}
+
+/* Container για όλες τις εμπειρίες */
+.experience-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Απόσταση μεταξύ των εμπειριών */
+}
+
+/* Ονομασία τεχνολογίας πάνω από το κουτί – απλό κείμενο, χωρίς white box */
+.tech-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.tech-title h2 {
+  color: #000;
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Νέα κλάση για το αριστερό πάνελ στη σελίδα Work Experience */
+.left-panel-work {
+  width: 250px; /* Μπορείς να αλλάξεις το πλάτος αν χρειάζεται */
+  background-color: #0077B5;
+  padding: 2rem 1rem;
+  color: #ffffff;
+  flex: 1 1 250px;
+  display: flex;
+}
+
+/* Για την εικόνα μέσα στο left-panel-work ώστε να μην κόβεται */
+.left-panel-work img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.left-panel img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+
+.main-content-work {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.left-panel-work {
+  position: relative;       /* ΝΕΟ: Για απόλυτη τοποθέτηση των εικόνων */
+  overflow: hidden;         /* Εξασφαλίζει ότι οι εικόνες παραμένουν μέσα στο πλαίσιο */
+  width: 250px;
+  background-color: #0077B5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.left-panel-work img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* Αρχικό transform: κεντράρει την εικόνα κάθετα */
+  transform: translate(0, -50%);
+}
+
+/* Right Panel - Work Experience */
+.right-panel-work {
+  flex: 2 1 500px;
+  padding: 2rem 1rem;
+}
+
+/* Bullet List Styling για το δεξί πάνελ */
+.right-panel-work ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.right-panel-work ul li {
+  margin-bottom: 0rem;
+  line-height: 1.5;
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ΝΕΟ: Κλάσεις για την εφαρμογή των animations */
+.slide-out {
+  animation: slideOutLeft 0.5s forwards;
+}
+.slide-in {
+  animation: slideInRight 0.5s forwards;
+}
+
+
+
+
+
+/* ------------------ Projects Page Styles ------------------ */
+
+/* Container για όλα τα project boxes */
+.projects-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Container για κάθε project box */
+.project-box-proj {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;  /* Μείωση του margin-bottom για λιγότερα κενά */
+}
+
+/* Νέο στυλ για τα ονόματα των projects (χωρίς background, όπως στο page-title) */
+/* Εδώ έχουμε μειώσει τα margins και το padding για να δημιουργούνται μικρότερα κενά */
+.project-title-proj {
+  text-align: center;
+  padding: 0.1rem 0;      /* Μειωμένο padding */
+  font-size: 2rem;      /* Ελαφρώς μικρότερη γραμματοσειρά */
+  color: #000;
+  font-weight: bold;
+}
+
+.project-content-proj {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;  /* Προστέθηκε για να έχουν όλα τα παιδιά (πάνελ) το ίδιο ύψος */
+}
+
+.left-panel-proj {
+  position: relative;
+  overflow: hidden;
+  width: 450px;       /* Αυξημένο από 250px σε 350px */
+  min-height: 250px;  /* Διατηρούμε ένα ελάχιστο ύψος για το πλαίσιο */
+  background-color: #0077B5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;      /* Μειωμένο padding για καλύτερη χρήση του χώρου */
+}
+
+.left-panel-proj img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* Ή cover, ανάλογα με την προτίμηση */
+}
+
+/* Δεξιό πάνελ (περιγραφή project) */
+.right-panel-proj {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+.right-panel-proj p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.right-panel-proj ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+.right-panel-proj ul ul {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;  /* Ελαφρώς αυξημένο margin-left για να ξεχωρίζουν τα nested items χωρίς επιπλέον κάθετο κενό */
+}

@@ -1,0 +1,134 @@
+function initCarousel(currentImgId, nextImgId, imagesArray, intervalTime = 8000, transitionTime = 1000) {
+  let currentIndex = 0;
+  const currentImage = document.getElementById(currentImgId);
+  const nextImage = document.getElementById(nextImgId);
+
+  function transitionImages() {
+    currentIndex = (currentIndex + 1) % imagesArray.length;
+    let called = false;  // Flag για να εξασφαλίσουμε ότι η μετάβαση γίνεται μόνο μία φορά
+
+    function animateTransition() {
+      if (called) return;
+      called = true;
+      // Εμφανίζουμε το nextImage και θέτουμε τις αρχικές ρυθμίσεις του
+      nextImage.style.display = 'block';
+      nextImage.style.transition = 'none';
+      nextImage.style.transform = 'translateX(100%)';
+      nextImage.style.opacity = '0';
+
+      // Εξαναγκάζουμε reflow ώστε οι νέες ρυθμίσεις να εφαρμοστούν
+      void nextImage.offsetWidth;
+
+      // Ορίζουμε τα transitions για το animation
+      currentImage.style.transition = `transform ${transitionTime}ms ease, opacity ${transitionTime}ms ease`;
+      nextImage.style.transition = `transform ${transitionTime}ms ease, opacity ${transitionTime}ms ease`;
+
+      // Ξεκινάμε τα animations:
+      // - Το τρέχον image μετακινείται προς τα αριστερά και ξεθωριάζει
+      // - Το next image έρχεται από τα δεξιά και εμφανίζεται
+      currentImage.style.transform = 'translateX(-100%)';
+      currentImage.style.opacity = '0';
+      nextImage.style.transform = 'translateX(0)';
+      nextImage.style.opacity = '1';
+
+      // Μετά το πέρας του animation, ανταλλάσσουμε τις εικόνες
+      setTimeout(() => {
+        currentImage.src = nextImage.src;
+        currentImage.style.transition = '';
+        currentImage.style.transform = 'translateX(0)';
+        currentImage.style.opacity = '1';
+
+        nextImage.style.display = 'none';
+        nextImage.style.transition = '';
+      }, transitionTime);
+    }
+
+    // Θέτουμε το onload event για το nextImage ώστε να ξεκινήσει το animation
+    nextImage.onload = function() {
+      animateTransition();
+    };
+
+    // Καταχωρούμε το νέο src με cache busting
+    nextImage.src = imagesArray[currentIndex] + '?t=' + new Date().getTime();
+
+    // Εάν η εικόνα είναι ήδη φορτωμένη, καλούμε το animation μετά από μια μικρή καθυστέρηση
+    if (nextImage.complete) {
+      setTimeout(() => {
+        if (!called) {
+          animateTransition();
+        }
+      }, 50);
+    }
+  }
+
+  // Ξεκινάμε το cycle κάθε intervalTime (προεπιλογή 4000ms)
+  setInterval(transitionImages, intervalTime);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  var progressCircle = document.getElementById("progress-circle");
+  var circumference = progressCircle.getTotalLength();
+  
+  progressCircle.style.strokeDasharray = circumference;
+  progressCircle.style.strokeDashoffset = circumference;
+  
+  // Ελέγχουμε αν η σελίδα φορτώθηκε στην κορυφή
+  if (document.documentElement.scrollTop === 0 && document.body.scrollTop === 0) {
+    scrollToTopBtn.style.display = "none";
+  }
+  
+  window.addEventListener("scroll", function() {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    
+    // Εμφάνιση του κουμπιού μόνο αν έχουμε κάνει scroll πάνω από 20px
+    if (scrollTop > 20) {
+      scrollToTopBtn.style.display = "flex";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+    
+    // Ενημέρωση του progress circle (προαιρετικά)
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrollFraction = scrollTop / scrollHeight;
+    var offset = circumference * (1 - scrollFraction);
+    progressCircle.style.strokeDashoffset = offset;
+  });
+  
+  // Κάνοντας click στο κουμπί γίνεται smooth scroll στην κορυφή
+  scrollToTopBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+
+// Αρχικοποίηση των carousels για κάθε project
+initCarousel('current-image-shop-management', 'next-image-shop-management', [
+  'images/projects/shop-management/home-page.png',
+  'images/projects/shop-management/order-creation.png',
+  'images/projects/shop-management/search-sale.png',
+  'images/projects/shop-management/login-image.png',
+  'images/projects/shop-management/search-customer.png'
+]);
+
+initCarousel('current-image-plugins', 'next-image-plugins', [
+  'images/projects/plugins/Gamerule-image1.png',
+  'images/projects/plugins/Gamerule-image2.png',
+  'images/projects/plugins/Gamerule-reviews.png',
+  'images/projects/plugins/WeightRPG.png',
+]);
+
+initCarousel('current-image-portfolio', 'next-image-portfolio', [
+  'images/projects/portfolio/javascript.png',
+  'images/projects/portfolio/oracle-linux.png',
+  'images/projects/portfolio/mariadb.png'
+]);
+
+initCarousel('current-image-android', 'next-image-android', [
+  'images/projects/shop-management-android/main-page.jpg',
+  'images/projects/shop-management-android/navigation-bar.jpg',
+  'images/projects/shop-management-android/customer-page.jpg',
+  'images/projects/shop-management-android/order-create.jpg',
+  'images/projects/shop-management-android/order-search.jpg',
+  'images/projects/shop-management-android/order-search2.jpg'
+]);

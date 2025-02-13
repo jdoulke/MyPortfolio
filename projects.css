@@ -1,0 +1,137 @@
+@import url("common.css");
+
+
+.projects-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.project-box-proj {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.project-title-proj {
+  text-align: center;
+  padding: 0.1rem 0;
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  color: #000;
+  font-weight: bold;
+}
+.project-content-proj {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+
+.left-panel-proj {
+  position: relative;
+  overflow: hidden;
+  width: 450px;       
+  min-height: 250px;
+  background-color: #0077B5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.left-panel-proj img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.right-panel-proj {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+.right-panel-proj p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.right-panel-proj ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+.right-panel-proj ul ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+}
+
+/* Στυλ για το scroll-to-top κουμπί */
+#scrollToTopBtn {
+  display: none;               
+  position: fixed;             
+  bottom: 5%;                
+  right: 5%;                 
+  z-index: 99;                 
+  border: none;                
+  outline: none;              
+  background-color: white;     
+  cursor: pointer;             
+  width: 40px;                 
+  height: 40px;                
+  border-radius: 50%;          
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3); 
+  transition: background-color 0.3s;
+  padding: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #f0f0f0;
+}
+
+
+#scrollToTopBtn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg); 
+}
+
+
+#scrollToTopBtn .arrow {
+  position: relative;
+  z-index: 1;                  
+  color: #007acc;              
+  font-size: 24px;             
+  pointer-events: none;        
+}
+
+@keyframes slideOutLeft {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-100%); opacity: 0; }
+}
+@keyframes slideInRight {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+.slide-out {
+  animation: slideOutLeft 0.5s forwards;
+}
+.slide-in {
+  animation: slideInRight 0.5s forwards;
+}
+
+
+.repo-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}

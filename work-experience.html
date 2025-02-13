@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Experience - Ioannis Doulkeridis</title>
+  <link rel="stylesheet" href="work-experience.css?v=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RSLB4ZRMY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4RSLB4ZRMY');
+  </script>  
+</head>
+<body>
+
+  <img src="images/background.jpg" alt="Header Image" class="header-image">
+
+  <header>
+    <div class="nav-container">
+      <span class="nav-toggle" onclick="openNav()">&#9776;</span>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="work-experience.html">Work Experience</a></li>
+          <li><a href="projects.html">Certifications</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="mobileMenu" class="side-overlay"></div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="side-overlay-content">
+      <a href="home.html">Home</a>
+      <a href="work-experience.html">Work Experience</a>
+      <a href="projects.html">Certifications</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div class="experience-container">
+    <h1 class="page-title-work">Deloitte</h1>
+    <div class="work-content">
+      <div class="left-panel-work">
+        <img id="current-image" src="images/work-experience/deloitte-logo.png" alt="Deloitte Logo">
+        <img id="next-image" src="" alt="Next Logo" style="display: none;">
+      </div>
+      <div class="right-panel">
+        <p><strong>I have been working at Deloitte as an Integration Engineer since 2023.</strong></p>
+        <p>In this role, I manage complex data integrations using <strong>Mulesoft</strong>, handling CRM, OMS, ESP, PIM, and various third-party services to ensure seamless operations across multiple systems.</p>
+        <p>I implement and adhere to <strong>Agile methodologies</strong> by actively participating in daily stand-ups, sprint reviews, and retrospective meetings, ensuring continuous integration and delivery.</p>
+        <p>Utilizing <strong>Jenkins</strong>, I maintain efficient build and release processes through continuous integration and deployment pipelines.</p>
+        <p>I also leverage <strong>Oracle SQL</strong> for the efficient storage, retrieval, and processing of large volumes of data, designing and executing complex queries to support data integration tasks.</p>
+        <p>Furthermore, I manage version control and code review processes using <strong>Sourcetree</strong> to uphold high code quality and collaboration standards.</p>
+        <p>I design, develop, and manage <strong>APIs</strong> (REST, SOAP, etc.) to support integration requirements, and contribute to the <strong>Application Maintenance</strong> team by maintaining, optimizing, and extending existing applications and workflows.</p>
+        <p>I further contribute to the development and expansion of code and integration flows, ensuring scalability and performance, and collaborate closely with cross-functional teams to identify integration requirements and deliver scalable solutions.</p>
+        <p>Additionally, I provide technical support and troubleshooting for integration-related issues, ensuring minimal disruption to business operations, while continuously identifying opportunities for <strong>process improvements and automation</strong> to enhance operational efficiency.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-links">
+    <a href="https://github.com/jdoulke" target="_blank">
+      <img src="images/github-icon.svg" alt="GitHub">
+    </a>
+    <a href="documents/Ioannis-Doulkeridis-cv.pdf" download>
+      <img src="images/cv-icon.svg" alt="Download CV">
+    </a>
+    <a href="https://www.linkedin.com/in/ioannis-doulkeridis-682b8b198/" target="_blank">
+      <img src="images/linkedin-icon.svg" alt="LinkedIn">
+    </a>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mobileMenu").classList.add("open");
+    }
+    function closeNav() {
+      document.getElementById("mobileMenu").classList.remove("open");
+    }
+  </script>
+  <script src="work-experience.js"></script>
+</body>
+</html>

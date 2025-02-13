@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Ioannis Doulkeridis</title>
+  <link rel="stylesheet" href="contact.css?v=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RSLB4ZRMY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4RSLB4ZRMY');
+  </script>
+</head>
+<body>
+
+  <!-- Header Image -->
+  <img src="images/background.jpg" alt="Header Image" class="header-image">
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav-container">
+      <span class="nav-toggle" onclick="openNav()">&#9776;</span>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="work-experience.html">Work Experience</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Side Overlay (for mobile) -->
+  <div id="mobileMenu" class="side-overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="side-overlay-content">
+      <a href="home.html">Home</a>
+      <a href="work-experience.html">Work Experience</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <h1>Contact Me</h1>
+    <p>
+      If you have any questions or would like to get in touch, feel free to email me directly at 
+      <a href="mailto:jdoulke@gmail.com">jdoulke@gmail.com</a>
+      or use the form below.
+    </p>
+
+    <!-- Contact Form (using Formspree as an example) -->
+    <form action="https://formspree.io/f/xkgovqkl" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="_replyto" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Social Links -->
+  <div class="social-links">
+    <a href="https://github.com/jdoulke" target="_blank">
+      <img src="images/github-icon.svg" alt="GitHub">
+    </a>
+    <a href="documents/Ioannis-Doulkeridis-cv.pdf" download>
+      <img src="images/cv-icon.svg" alt="Download CV">
+    </a>
+    <a href="https://www.linkedin.com/in/ioannis-doulkeridis-682b8b198/" target="_blank">
+      <img src="images/linkedin-icon.svg" alt="LinkedIn">
+    </a>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mobileMenu").classList.add("open");
+    }
+    function closeNav() {
+      document.getElementById("mobileMenu").classList.remove("open");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+@import url("common.css");
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.left-panel {
+  background-color: #0077B5;
+  padding: 2rem 1rem;
+  color: #ffffff;
+  flex: 1 1 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-panel img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+.right-panel {
+  flex: 2 1 500px;
+  padding: 2rem 1rem;
+}
+.right-panel p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .right-panel {
+    padding: 1rem;
+  }
+}

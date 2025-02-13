@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications - Ioannis Doulkeridis</title>
+  <link rel="stylesheet" href="certifications.css?v=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RSLB4ZRMY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4RSLB4ZRMY');
+  </script>
+</head>
+<body>
+
+  <!-- Header Image -->
+  <img src="images/background.jpg" alt="Header Image" class="header-image">
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav-container">
+      <span class="nav-toggle" onclick="openNav()">&#9776;</span>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="work-experience.html">Work Experience</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Side Overlay (for mobile) -->
+  <div id="mobileMenu" class="side-overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="side-overlay-content">
+      <a href="home.html">Home</a>
+      <a href="work-experience.html">Work Experience</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  
+  <div class="experience-container">
+    <h1 class="page-title-work">Mulesoft Developer - Level 1</h1>
+    
+    <div class="work-content">
+      
+      <div class="left-panel-work">
+        <img id="current-image" src="images/mulesoft-developer-level-1.png" alt="Oracle Certified Professional Logo">
+        <img id="next-image" src="" alt="Next Logo" style="display: none;">
+      </div>
+      <div class="right-panel">
+        <p>
+            This certification validates my expertise in designing, developing, testing, debugging, managing and deploying APIs and integrations using the Mulesoft Anypoint Platform. The exam covered essential topics such as API design, data transformation, and integration patterns, demonstrating my ability to build scalable and robust solutions.
+          </p>
+          <p>
+            Earning this certification is a significant milestone in my professional development, and it is the first step for my carrer journey as an Integration Engineer.
+          </p>
+          <p>
+            <a href="documents/MuleSoft-Developer-Level-1-Certification.pdf" download style="text-decoration: none; color: #007acc;">
+              Download Certification PDF
+            </a>
+          </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="social-links">
+    <a href="https://github.com/jdoulke" target="_blank">
+      <img src="images/github-icon.svg" alt="GitHub">
+    </a>
+    <a href="documents/Ioannis-Doulkeridis-cv.pdf" download>
+      <img src="images/cv-icon.svg" alt="Download CV">
+    </a>
+    <a href="https://www.linkedin.com/in/ioannis-doulkeridis-682b8b198/" target="_blank">
+      <img src="images/linkedin-icon.svg" alt="LinkedIn">
+    </a>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mobileMenu").classList.add("open");
+    }
+    function closeNav() {
+      document.getElementById("mobileMenu").classList.remove("open");
+    }
+  </script>
+
+</body>
+</html>

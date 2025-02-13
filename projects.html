@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ioannis Doulkeridis</title>
+  <link rel="stylesheet" href="projects.css?v=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RSLB4ZRMY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4RSLB4ZRMY');
+  </script>  
+</head>
+<body>
+
+  <img src="images/background.jpg" alt="Header Image" class="header-image">
+
+  <header>
+    <div class="nav-container">
+      <span class="nav-toggle" onclick="openNav()">&#9776;</span>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="work-experience.html">Work Experience</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="mobileMenu" class="side-overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="side-overlay-content">
+      <a href="home.html">Home</a>
+      <a href="work-experience.html">Work Experience</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+
+  
+  <div class="projects-container">
+    <h2 class="project-title-proj">Shop Management App</h2>
+    <div class="project-box-proj" id="project1-proj">
+      <div class="project-content-proj">
+        <div class="left-panel-proj">
+          <img id="current-image-shop-management" src="images/projects/shop-management/login-image.png" alt="First Image">
+          <img id="next-image-shop-management" src="" alt="Next Image" style="display: none;">
+        </div>
+        <div class="right-panel-proj">
+          <p>A JavaFX desktop application for managing an electronic store’s operations, including customers, products, orders, and sales. 
+            Designed for administrators and salespeople, it ensures efficiency, security, and data integrity through Oracle DB, stored procedures, and logging mechanisms.
+            Clean code structure with services & controllers.
+            <a href="https://github.com/jdoulke/shopManagement" target="_blank" style="text-decoration: none; color: blue;">
+              View Repository
+            </a>
+          </p>
+            <ul>
+            <li><strong>Key Features</strong></li>
+            <ul>
+              <li><strong>Role-Based Access</strong> – Secure login for admins & salespeople.</li>
+              <li><strong>Customer & Product Management</strong> – Add, search, edit, and remove records.</li>
+              <li><strong>Order & Sales Processing</strong> – Real-time stock validation & transaction tracking.</li>
+              <li><strong>Database Security</strong> – Stored procedures, triggers, and structured data access.</li>
+              <li><strong>Audit Logs</strong> – Automatic logging of all database modifications.</li>
+            </ul>
+            <li><strong>Tech Stack</strong></li>
+            <ul>
+              <li><strong>JavaFX</strong> - UI framework for a rich desktop experience.</li>
+              <li><strong>Oracle DB</strong> - Secure relational data storage.</li>
+              <li><strong>Stored Procedures & Triggers</strong> - Safe & efficient database interactions.</li>
+              <li><strong>Logging System</strong> - Full traceability of transactions.</li>
+            </ul>  
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="project-title-proj">Java Plugins for Minecraft Servers</h2>
+    <div class="project-box-proj" id="project2-proj">
+      <div class="project-content-proj">
+        <div class="left-panel-proj">
+          <img id="current-image-plugins" src="images/projects/plugins/Gamerule-image1.png" alt="First Image">
+          <img id="next-image-plugins" src="" alt="Next Image" style="display: none;">
+        </div>
+        <div class="right-panel-proj">
+          <p>
+            During my teenage years I managed many Minecraft servers with many players.
+            When I began learning to program, I wanted to create my own plugins to see my code come to life—tested and refined by a vibrant community that
+            not only enjoyed the new features but also helped me improve. With that spirit in mind, I developed two unique plugins, both of which received excellent reviews and a significant number of downloads.
+          </p>
+          <ul>
+            <li>
+              <strong>Ultimate Gamerules Manager</strong>
+              <ul>
+                <li>Enables server administrators to easily modify and manage Minecraft's gamerules.</li>
+                <li>Features an intuitive interface for quick in-game adjustments.</li>
+                <li>Achieved a perfect <strong>5/5 rating across 12 reviews</strong> and nearly <strong>5,500 downloads</strong>.</li>
+                <li>Has unique features like copy-paste gamerules from world to world.</li>
+                <li>
+                  <a href="https://www.spigotmc.org/resources/ultimate-gamerules-manager-1-13-1-21-4.102215/" target="_blank" style="text-decoration: none; color: blue;">
+                    Ultimate Gamerules Manager on SpigotMC
+                  </a>
+                  <span style="margin: 0 5px;">|</span>
+                  <a href="https://github.com/jdoulke/GamerulesManager" target="_blank" style="text-decoration: none; color: blue;">
+                    View Repository
+                  </a>
+                  <span style="margin: 0 5px;">|</span>
+                  <a href="https://www.youtube.com/watch?v=w2N0Ld9dbks" target="_blank" style="text-decoration: none; color: blue;">
+                    Youtube Video by a User
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Weight-RPG</strong>
+              <ul>
+                <li>Adds an <strong>extra gameplay mechanism</strong> similar to those in AAA games—something Minecraft normally lacks.</li>
+                <li>Assigns weight to all Minecraft items. Administrator can change the values via a JSON file.</li>
+                <li>Applies specific punishments based on the administrator's settings.</li>
+                <li>Can block player movement or prevent jumping.</li>
+                <li>Provides items that allow players to withstand more weight.</li>
+                <li>Integrates with other plugins to enhance interactivity.</li>
+                <li>Earned a perfect <strong>5/5 rating in 8 reviews</strong> and approximately <strong>1,500 downloads</strong>.</li>
+                <li>
+                  <a href="https://www.spigotmc.org/resources/weight-rpg.105513/" target="_blank" style="text-decoration: none; color: blue;">
+                    Weight-RPG on SpigotMC
+                  </a>
+                  <span style="margin: 0 5px;">|</span>
+                  <a href="https://github.com/jdoulke/Weight-RPG" target="_blank" style="text-decoration: none; color: blue;">
+                    View Repository
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="project-title-proj">Portfolio Website</h2>
+    <div class="project-box-proj" id="project3-proj">
+      <div class="project-content-proj">
+        <div class="left-panel-proj">
+        <!-- Replace with an image of your portfolio site if available -->
+          <img id="current-image-portfolio" src="images/projects/portfolio/javascript.png" alt="First Image">
+          <img id="next-image-portfolio" src="" alt="Next Image" style="display: none;">
+        </div>
+        <div class="right-panel-proj">
+          <p>
+            For this portfolio website, I discovered that Oracle provides free resources to build a small server.
+            Taking advantage of this, I built a server on Oracle Unix and performed the necessary steps to get this site and domain up and running.
+            I also plan to use the server as a database for future projects. <a href="https://github.com/jdoulke/Portfolio" target="_blank" style="text-decoration: none; color: blue;">
+              View Repository
+            </a>
+          </p>
+          <ul>
+            <li><strong>Server Setup:</strong> Leveraged free Oracle resources to build and configure a server on Oracle Unix.</li>
+            <li><strong>Site & Domain:</strong> Completed all the required actions to launch this website and secure the domain.</li>
+            <li><strong>Future Database:</strong> The server will be utilized for database management in upcoming projects.</li>
+            <li><strong>Tech Stack:</strong> Developed using HTML, CSS, and JavaScript.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="project-title-proj">Shop Management Android App</h2>
+    <div class="project-box-proj" id="project4-proj">
+      <div class="project-content-proj">
+        <div class="left-panel-proj">
+          <img id="current-image-android" src="images/projects/shop-management-android/main-page.jpg" alt="First Image">
+          <img id="next-image-android" src="" alt="Next Image" style="display: none;">
+        </div>
+        <div class="right-panel-proj">
+          <p>
+            The Shop Managemt Android App is a comprehensive Android application developed with Android Studio using Java, designed to efficiently manage a store.
+            It is in greek and it serves as a powerful tool for efficiently managing a store, providing a seamless experience for store owners and managers.
+            This application allows users to effortlessly handle customers, products, and orders, streamlining the entire e-commerce process.
+            <a href="https://github.com/jdoulke/E-Shop_Manager" target="_blank" style="text-decoration: none; color: blue;">
+              View Repository
+            </a>
+          </p>
+          <ul>
+            <li><strong>Key Features</strong></li>
+            <ul>
+              <li><strong>Customer Management:</strong> Easily manage customer details—add new customers, edit existing data, and maintain a full database.</li>
+              <li><strong>Product Management:</strong> Efficiently add, update, and view detailed product information.</li>
+              <li><strong>Order Management:</strong> Seamlessly create, track, and manage orders for timely processing and fulfillment.</li>
+              <li><strong>RoomAPI Integration:</strong> Utilize RoomAPI for reliable and efficient local data storage and retrieval.</li>
+              <li><strong>Firestore Integration:</strong> Leverage Firestore for effective sales data tracking and reporting.</li>
+              <li><strong>Sleek UI:</strong> Enjoy a minimalist, user-friendly interface that enhances the overall experience.</li>
+              <li><strong>Easy Navigation:</strong> Navigate effortlessly with clear buttons and a streamlined navigation bar.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  
+  <div class="social-links">
+    <a href="https://github.com/jdoulke" target="_blank">
+      <img src="images/github-icon.svg" alt="GitHub">
+    </a>
+    <a href="documents/Ioannis-Doulkeridis-cv.pdf" download>
+      <img src="images/cv-icon.svg" alt="Download CV">
+    </a>
+    <a href="https://www.linkedin.com/in/ioannis-doulkeridis-682b8b198/" target="_blank">
+      <img src="images/linkedin-icon.svg" alt="LinkedIn">
+    </a>
+  </div>
+
+  <button id="scrollToTopBtn" title="Go to top">
+    
+    <svg id="progress-svg" width="40" height="40">
+      <circle id="progress-circle" cx="20" cy="20" r="18" stroke="red" stroke-width="4" fill="none" />
+    </svg>
+  
+    <span class="arrow">↑</span>
+  </button>
+
+  <script>
+    function openNav() {
+      document.getElementById("mobileMenu").classList.add("open");
+    }
+    function closeNav() {
+      document.getElementById("mobileMenu").classList.remove("open");
+    }
+  </script>
+  <script src="projects.js"></script>
+</body>
+</html>

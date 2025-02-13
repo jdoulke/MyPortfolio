@@ -1,0 +1,180 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+/* Header Image */
+.header-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Header */
+header {
+  background-color: #0077B5;
+  position: relative;
+}
+
+/* Navigation Container */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  position: relative;
+}
+
+/* Desktop Navigation */
+.desktop-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.desktop-nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.desktop-nav ul li a:hover {
+  background-color: #005f8b;
+}
+
+/* Hamburger Menu (Nav Toggle) - εμφανίζεται μόνο σε mobile */
+.nav-toggle {
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1100;
+}
+
+/* Mobile Menu (Side Overlay) - αρχικά κρυφό */
+.side-overlay {
+  position: fixed;
+  top: 150px; /* Ξεκινά κάτω από το header-image */
+  left: 0;
+  width: 70%;
+  height: calc(100% - 150px); /* Δεν καλύπτει το header */
+  background: linear-gradient(90deg, #0077B5, #005f8b);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Όταν το menu ανοίγει, προστίθεται η κλάση .open */
+.side-overlay.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Close Button για το Mobile Menu */
+.closebtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Περιεχόμενο του Mobile Menu - στοιχίζουμε τις επιλογές κάθετα στο κέντρο */
+.side-overlay-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem;
+  height: 100%;
+}
+
+/* Στυλιζάρισμα των επιλογών ως κουτάκια */
+.side-overlay-content a {
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+  width: 90%;
+}
+
+/* Hover effect για τα κουτάκια */
+.side-overlay-content a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(10px);
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  margin: 2rem 0 1.5rem;
+  font-size: 3rem;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.social-links a {
+  text-decoration: none;
+}
+
+.social-links img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+  opacity: 0.7;
+}
+
+/* Media Queries για Mobile */
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
