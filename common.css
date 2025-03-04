@@ -155,12 +155,35 @@ header {
   opacity: 0.7;
 }
 
-@media (max-width: 992px) {
+  
+@media (max-width: 850px) {
   .desktop-nav {
     display: none;
   }
+
+  .side-overlay-content a {
+    font-size: 1.2rem; 
+    padding: 1rem;     
+    margin: 0.rem 0; 
+  }
+
+  .side-overlay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2.5rem;
+    height: 100%;
+  }
+
   .nav-toggle {
     display: block;
+  }
+
+  
+  .nav-container {
+    overflow: hidden;
   }
 }
 
@@ -170,15 +193,20 @@ header {
     left: 0;
   }
 
+  .side-overlay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2.5rem;
+    height: 100%;
+  }
 
   .side-overlay-content a {
     font-size: 1.2rem; 
     padding: 1rem;     
-    margin: 0.5rem 0; 
-  }
-  
-  .nav-container {
-    overflow: hidden;
+    margin: 0.25rem 0; 
   }
 }
 
@@ -188,13 +216,27 @@ header {
     left: 0;
   }
 
+  .side-overlay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    height: 100%;
+  }
+
   .side-overlay-content a {
-    font-size: 1.1rem;
-    padding: 0.4rem;  
-    margin: 0.4rem 0;  
+    font-size: 1.2rem; 
+    padding: 0.5rem;     
+    margin: 0.25rem 0; 
   }
   
   .nav-container {
     overflow: hidden;
+  }
+
+  .nav-toggle {
+    display: block;
   }
 }
