@@ -24,7 +24,6 @@
   line-height: 1.5;
 }
 
-/* Form styling */
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -61,8 +60,3 @@ button[type="submit"]:hover {
   background-color: #005f8c;
 }
 
-@media (max-width: 992px) {
-  .contact-container {
-    padding: 1rem;
-  }
-}

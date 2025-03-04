@@ -1,4 +1,3 @@
-/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,6 @@ body {
   background-color: #f3f3f3;
 }
 
-/* Header Image */
 .header-image {
   width: 100%;
   max-height: 150px;
@@ -18,13 +16,11 @@ body {
   display: block;
 }
 
-/* Header */
 header {
   background-color: #0077B5;
   position: relative;
 }
 
-/* Navigation Container */
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -36,7 +32,6 @@ header {
   position: relative;
 }
 
-/* Desktop Navigation */
 .desktop-nav ul {
   list-style: none;
   display: flex;
@@ -57,7 +52,6 @@ header {
   background-color: #005f8b;
 }
 
-/* Hamburger Menu (Nav Toggle) - εμφανίζεται μόνο σε mobile */
 .nav-toggle {
   color: #ffffff;
   font-size: 2rem;
@@ -70,13 +64,12 @@ header {
   z-index: 1100;
 }
 
-/* Mobile Menu (Side Overlay) - αρχικά κρυφό */
 .side-overlay {
   position: fixed;
-  top: 150px; /* Ξεκινά κάτω από το header-image */
+  top: 150px;
   left: 0;
   width: 70%;
-  height: calc(100% - 150px); /* Δεν καλύπτει το header */
+  height: calc(100% - 150px);
   background: linear-gradient(90deg, #0077B5, #005f8b);
   backdrop-filter: blur(5px);
   z-index: 1000;
@@ -87,13 +80,11 @@ header {
   border-bottom-right-radius: 20px;
 }
 
-/* Όταν το menu ανοίγει, προστίθεται η κλάση .open */
 .side-overlay.open {
   transform: translateX(0);
   opacity: 1;
 }
 
-/* Close Button για το Mobile Menu */
 .closebtn {
   position: absolute;
   top: 1rem;
@@ -105,7 +96,6 @@ header {
   z-index: 1100;
 }
 
-/* Περιεχόμενο του Mobile Menu - στοιχίζουμε τις επιλογές κάθετα στο κέντρο */
 .side-overlay-content {
   display: flex;
   flex-direction: column;
@@ -116,7 +106,6 @@ header {
   height: 100%;
 }
 
-/* Στυλιζάρισμα των επιλογών ως κουτάκια */
 .side-overlay-content a {
   padding: 2rem;
   font-size: 1.5rem;
@@ -130,13 +119,11 @@ header {
   width: 90%;
 }
 
-/* Hover effect για τα κουτάκια */
 .side-overlay-content a:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateX(10px);
 }
 
-/* Page Title */
 .page-title {
   text-align: center;
   margin: 2rem 0 1.5rem;
@@ -145,7 +132,6 @@ header {
   font-weight: bold;
 }
 
-/* Social Links */
 .social-links {
   display: flex;
   justify-content: center;
@@ -169,12 +155,46 @@ header {
   opacity: 0.7;
 }
 
-/* Media Queries για Mobile */
 @media (max-width: 992px) {
   .desktop-nav {
     display: none;
   }
   .nav-toggle {
     display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .side-overlay {
+    width: 100%;
+    left: 0;
+  }
+
+
+  .side-overlay-content a {
+    font-size: 1.2rem; 
+    padding: 1rem;     
+    margin: 0.5rem 0; 
+  }
+  
+  .nav-container {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 375px) {
+  .side-overlay {
+    width: 100%;
+    left: 0;
+  }
+
+  .side-overlay-content a {
+    font-size: 1.1rem;
+    padding: 0.4rem;  
+    margin: 0.4rem 0;  
+  }
+  
+  .nav-container {
+    overflow: hidden;
   }
 }
