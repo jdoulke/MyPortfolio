@@ -1,6 +1,5 @@
 @import url("common.css");
 
-
 .main-content {
   display: flex;
   flex-wrap: wrap;
@@ -10,6 +9,8 @@
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+/* Left photo panel */
 .left-panel {
   background-color: #0077B5;
   padding: 2rem 1rem;
@@ -25,11 +26,43 @@
   object-fit: cover;
   border: 3px solid #ffffff;
 }
+
+/* Right content panel */
 .right-panel {
   flex: 2 1 500px;
   padding: 2rem 1rem;
 }
 .right-panel p {
   margin-bottom: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
+}
+
+/* Recruiter-friendly blurb */
+.recruiter-blurb {
+  max-width: 75ch;
+  line-height: 1.85;           /* λίγο παραπάνω “αέρας” ανά γραμμή */
+  margin-bottom: 1rem;         /* κενό πριν τα bullets */
+  padding-left: 1rem;
+  border-left: 4px solid #e9f3ff;
+  background: linear-gradient(to right, #f8fbff 0%, transparent 55%);
+  border-radius: 2px;
+}
+/* + λίγο κενό ανάμεσα στα <br> lines */
+.recruiter-blurb br {
+  display: block;
+  margin: .25rem 0;
+}
+
+/* Bullets */
+.facts {
+  list-style: disc;
+  margin: .5rem 0 0 1.15rem;
+  line-height: 1.65;
+}
+.facts li { margin: .35rem 0; }
+
+/* Mobile tweaks */
+@media (max-width: 850px) {
+  .left-panel img { width: 200px; height: 240px; }
+  .recruiter-blurb { line-height: 1.8; }
 }
