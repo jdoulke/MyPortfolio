@@ -110,3 +110,12 @@ initCarousel('current-image-android', 'next-image-android', [
   'images/projects/shop-management-android/order-search.jpg',
   'images/projects/shop-management-android/order-search2.jpg'
 ]);
+
+initCarousel('current-image-thesssense', 'next-image-thesssense', [
+  'images/projects/thesssense/home.png',
+  'images/projects/thesssense/main.jpg',
+  'images/projects/thesssense/water-data.jpg',
+  'images/projects/thesssense/air-data.jpg',
+  'images/projects/thesssense/water-comparisson.jpg',
+  'images/projects/thesssense/air-comparisson.jpg'
+]);

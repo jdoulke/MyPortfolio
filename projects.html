@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ioannis Doulkeridis</title>
-  <link rel="stylesheet" href="projects.css?v=1">
+  <link rel="stylesheet" href="projects.css?v=2">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RSLB4ZRMY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4RSLB4ZRMY');
-  </script>  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4RSLB4ZRMY');
+  </script>
 </head>
 <body>
 
@@ -43,10 +43,71 @@
     </div>
   </div>
 
-
-  
   <div class="projects-container">
-    <h2 class="project-title-proj">Shop Management App</h2>
+
+    <!-- ThessSense -->
+    <h2 class="project-title-proj">ThessSense <small>(2025)</small></h2>
+    <div class="project-box-proj" id="project-thesssense">
+      <div class="project-content-proj">
+        <div class="left-panel-proj">
+          <img id="current-image-thesssense" src="images/projects/thesssense/home.png" alt="ThessSense Home">
+          <img id="next-image-thesssense" src="" alt="Next Image" style="display: none;">
+        </div>
+        <div class="right-panel-proj">
+          <p>
+            ThessSense is an innovative Android application for tracking and visualizing the historical air and water quality in Thessaloniki.
+            Designed for citizens, researchers, and decision-makers, ThessSense delivers an interactive and personalized experience 
+            with all features available both in Greek and English. It consumes open-data JSON endpoints and renders measurements on Google Maps with markers,
+            station details, and filters.
+            <a href="https://github.com/jdoulke/ThessSense" target="_blank" style="text-decoration: none; color: blue;">
+              View Repository
+            </a>
+          </p>
+
+          <ul>
+            <li>
+              <strong>Key Features</strong>
+              <ul>
+                <li><strong>Interactive Map</strong> – Google Maps with markers and basic clustering.</li>
+                <li><strong>Open Data Ingestion</strong> – Pulls live values from public JSON APIs.</li>
+                <li><strong>Station Details</strong> – Indicator description, latest value, unit, and source.</li>
+                <li><strong>Filtering</strong> – By area and by indicator type for quicker insights.</li>
+                <li><strong>Bilingual UI</strong> – Full interface available in Greek and English.</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Tech Stack</strong>
+              <ul>
+                <li><strong>Android (Java/Kotlin)</strong> – Core application and UI.</li>
+                <li><strong>Google Maps SDK</strong> – Map rendering, markers, camera control.</li>
+                <li><strong>JSON APIs</strong> – Open data endpoints for measurements.</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Competition & Media</strong>
+              <ul>
+                <li>
+                  Built for the open-data challenge by OKFN Greece:
+                  <a href="https://openup.okfn.gr/about" target="_blank" style="text-decoration: none; color: blue;">OpenUp (about)</a>
+                </li>
+                <li>
+                  Featured on Greek public TV:
+                  <a href="https://www.youtube.com/watch?v=rXUWQGmeIFY" target="_blank" style="text-decoration: none; color: blue;">YouTube #1</a>
+                  <span style="margin: 0 5px;">|</span>
+                  <a href="https://www.youtube.com/watch?v=NPHSNpLgOIg" target="_blank" style="text-decoration: none; color: blue;">YouTube #2</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Shop Management App -->
+    <h2 class="project-title-proj">Shop Management App <small>(2024)</small></h2>
     <div class="project-box-proj" id="project1-proj">
       <div class="project-content-proj">
         <div class="left-panel-proj">
@@ -54,15 +115,16 @@
           <img id="next-image-shop-management" src="" alt="Next Image" style="display: none;">
         </div>
         <div class="right-panel-proj">
-          <p>  A comprehensive JavaFX desktop application for managing a retail technology shop efficiently. 
-                Enables administrators and salespeople to handle customers, products, orders, and sales securely.
-                Leverages Oracle Database with JDBC for reliable connectivity and efficient database interactions, 
-                complemented by stored procedures, triggers, and robust logging for secure transactions.
+          <p>
+            A comprehensive JavaFX desktop application for managing a retail technology shop efficiently.
+            Enables administrators and salespeople to handle customers, products, orders, and sales securely.
+            Leverages Oracle Database with JDBC for reliable connectivity and efficient database interactions,
+            complemented by stored procedures, triggers, and robust logging for secure transactions.
             <a href="https://github.com/jdoulke/shopManagement" target="_blank" style="text-decoration: none; color: blue;">
               View Repository
             </a>
           </p>
-            <ul>
+          <ul>
             <li><strong>Key Features</strong></li>
             <ul>
               <li><strong>Role-Based Access</strong> – Secure login for admins & salespeople.</li>
@@ -77,13 +139,14 @@
               <li><strong>Oracle DB & JDBC</strong> - Secure relational data storage.</li>
               <li><strong>Stored Procedures & Triggers</strong> - Safe & efficient database interactions.</li>
               <li><strong>Logging System</strong> - Full traceability of transactions.</li>
-            </ul>  
+            </ul>
           </ul>
         </div>
       </div>
     </div>
 
-    <h2 class="project-title-proj">Java Plugins for Minecraft Servers</h2>
+    <!-- Java Plugins -->
+    <h2 class="project-title-proj">Java Plugins for Minecraft Servers <small>(2023 — 2025)</small></h2>
     <div class="project-box-proj" id="project2-proj">
       <div class="project-content-proj">
         <div class="left-panel-proj">
@@ -145,11 +208,11 @@
       </div>
     </div>
 
-    <h2 class="project-title-proj">Portfolio Website</h2>
+    <!-- Portfolio Website -->
+    <h2 class="project-title-proj">Portfolio Website <small>(2024 — present)</small></h2>
     <div class="project-box-proj" id="project3-proj">
       <div class="project-content-proj">
         <div class="left-panel-proj">
-        <!-- Replace with an image of your portfolio site if available -->
           <img id="current-image-portfolio" src="images/projects/portfolio/javascript.png" alt="First Image">
           <img id="next-image-portfolio" src="" alt="Next Image" style="display: none;">
         </div>
@@ -157,7 +220,8 @@
           <p>
             For this portfolio website, I discovered that Oracle provides free resources to build a small server.
             Taking advantage of this, I built a server on Oracle Unix and performed the necessary steps to get this site and domain up and running.
-            I also plan to use the server as a database for future projects. <a href="https://github.com/jdoulke/MyPortfolio" target="_blank" style="text-decoration: none; color: blue;">
+            I also plan to use the server as a database for future projects.
+            <a href="https://github.com/jdoulke/MyPortfolio" target="_blank" style="text-decoration: none; color: blue;">
               View Repository
             </a>
           </p>
@@ -171,7 +235,8 @@
       </div>
     </div>
 
-    <h2 class="project-title-proj">Shop Management Android App</h2>
+    <!-- Shop Management Android App -->
+    <h2 class="project-title-proj">Shop Management Android App <small>(2023 — 2024)</small></h2>
     <div class="project-box-proj" id="project4-proj">
       <div class="project-content-proj">
         <div class="left-panel-proj">
@@ -180,7 +245,7 @@
         </div>
         <div class="right-panel-proj">
           <p>
-            The Shop Managemt Android App is a comprehensive Android application developed with Android Studio using Java, designed to efficiently manage a store.
+            The Shop Management Android App is a comprehensive Android application developed with Android Studio using Java, designed to efficiently manage a store.
             It is in greek and it serves as a powerful tool for efficiently managing a store, providing a seamless experience for store owners and managers.
             This application allows users to effortlessly handle customers, products, and orders, streamlining the entire e-commerce process.
             <a href="https://github.com/jdoulke/E-Shop_Manager" target="_blank" style="text-decoration: none; color: blue;">
@@ -203,7 +268,8 @@
       </div>
     </div>
 
-  
+  </div>
+
   <div class="social-links">
     <a href="https://github.com/jdoulke" target="_blank">
       <img src="images/github-icon.svg" alt="GitHub">
@@ -217,11 +283,9 @@
   </div>
 
   <button id="scrollToTopBtn" title="Go to top">
-    
     <svg id="progress-svg" width="40" height="40">
       <circle id="progress-circle" cx="20" cy="20" r="18" stroke="red" stroke-width="4" fill="none" />
     </svg>
-  
     <span class="arrow">↑</span>
   </button>
 
