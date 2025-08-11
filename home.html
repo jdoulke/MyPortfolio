@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ioannis Doulkeridis</title>
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="home.css?v=2" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RSLB4ZRMY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4RSLB4ZRMY');
-  </script>  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4RSLB4ZRMY');
+  </script>
 </head>
 <body>
 
-  <img src="images/background.jpg" alt="Header Image" class="header-image">
+  <img src="images/background.jpg" alt="Header Image" class="header-image" />
 
   <header>
     <div class="nav-container">
-
       <span class="nav-toggle" onclick="openNav()">&#9776;</span>
-
       <nav class="desktop-nav">
         <ul>
           <li><a href="home.html">Home</a></li>
@@ -31,11 +29,8 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
-
-  <h1 class="page-title">Ioannis Doulkeridis</h1>
 
   <div id="mobileMenu" class="side-overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -48,44 +43,61 @@
     </div>
   </div>
 
+  <h1 class="page-title">Ioannis Doulkeridis</h1>
 
   <div class="main-content">
     <div class="left-panel">
-      <img src="images/me.jpg" alt="My Photo">
+      <img src="images/me.jpg" alt="Ioannis Doulkeridis" />
     </div>
+
     <div class="right-panel">
-      <p>
-        I am a dedicated Integration Engineer at Deloitte and a student at the Department of Information and Electronic Engineering at the International Hellenic University of Greece. My current role involves managing complex data integrations for large-scale projects, utilizing technologies like Mulesoft and Oracle databases to ensure seamless operations. I specialize in designing and maintaining scalable APIs and workflows, with a focus on backend development.
+      <p class="lead">
+        Hi, I’m Ioannis. I’m a student at the Department of Information & Electronic Engineering (International Hellenic University).
+        I started my career as an Integration Engineer and <strong>I’m now a MuleSoft Tech Lead at Deloitte</strong>.
       </p>
+
       <p>
-        Programming is not just my profession—it’s my passion. I enjoy diving deep into backend development, solving challenging problems, and optimizing systems for scalability and performance. Beyond my work, I constantly strive to expand my knowledge by exploring new technologies, working on personal projects.
+        Today, I lead an <strong>Agile squad</strong> and keep delivery predictable — from estimations and capacity to backlog hygiene and clear communication.
+        I focus on integrations and APIs, plus backend development with clean, scalable architecture and reliable CI/CD.
+        I integrate front-end with third-party systems (OMS, CRM, ERP, PIM) and build APIs for internal and external consumers.
       </p>
+
       <p>
-        Whether I’m developing custom software solutions, troubleshooting complex integration issues, or creating plugins and mods for games, I bring enthusiasm and dedication to everything I do. I thrive on challenges and see every project as an opportunity to grow and innovate.
+        I genuinely love programming and keep learning beyond work by shipping small, real-world projects —
+        lately open-data mobile apps like <em>ThessSense</em> and practical plugins/tools that solve everyday problems.
+        It keeps me curious, hands-on, and always improving.
       </p>
+
+      <ul class="facts">
+        <li><strong>Path:</strong> Student → Integration Engineer → MuleSoft Tech Lead (Deloitte)</li>
+        <li><strong>Focus:</strong> Integrations & APIs: clean, scalable backend, reliable CI/CD</li>
+        <li><strong>Now:</strong> Leading an Agile squad and keeping delivery predictable</li>
+        <li><strong>Beyond work:</strong> Open-data app <em>ThessSense</em> & practical plugins/tools</li>
+      </ul>
     </div>
   </div>
 
   <div class="social-links">
     <a href="https://github.com/jdoulke" target="_blank">
-      <img src="images/github-icon.svg" alt="GitHub">
+      <img src="images/github-icon.svg" alt="GitHub" />
     </a>
     <a href="documents/Ioannis-Doulkeridis-cv.pdf" download>
-      <img src="images/cv-icon.svg" alt="Download CV">
+      <img src="images/cv-icon.svg" alt="Download CV" />
     </a>
     <a href="https://www.linkedin.com/in/ioannis-doulkeridis-682b8b198/" target="_blank">
-      <img src="images/linkedin-icon.svg" alt="LinkedIn">
+      <img src="images/linkedin-icon.svg" alt="LinkedIn" />
     </a>
   </div>
 
   <script>
     function openNav() {
       document.getElementById("mobileMenu").classList.add("open");
+      document.body.classList.add("menu-open");
     }
     function closeNav() {
       document.getElementById("mobileMenu").classList.remove("open");
+      document.body.classList.remove("menu-open");
     }
   </script>
-
 </body>
 </html>
