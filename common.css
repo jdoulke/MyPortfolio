@@ -66,18 +66,17 @@ header {
 
 .side-overlay {
   position: fixed;
-  top: 150px;
+  top: 0;            
   left: 0;
   width: 70%;
-  height: calc(100% - 150px);
+  height: 100dvh;    
   background: linear-gradient(90deg, #0077B5, #005f8b);
   backdrop-filter: blur(5px);
   z-index: 1000;
   transform: translateX(-100%);
   opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  transition: transform .3s ease, opacity .3s ease;
+  border-radius: 0 20px 20px 0;
 }
 
 .side-overlay.open {
@@ -240,3 +239,11 @@ header {
     display: block;
   }
 }
+
+@media (max-width: 850px) and (orientation: landscape) {
+  .side-overlay { width: 60%; }
+  .side-overlay-content { padding: 1rem; gap: .75rem; }
+  .side-overlay-content a { padding: .75rem 1rem; font-size: 1rem; }
+  .header-image { display: none; }
+}
+
